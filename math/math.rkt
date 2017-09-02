@@ -5,7 +5,6 @@ Basic math functions
 
 TODO:
 figure out a better add function
-abs needs tests
 
 |#
 
@@ -25,7 +24,5 @@ abs needs tests
 		x))
 
 ;; average : lon -> number 
-
-
 
 
