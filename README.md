@@ -1,1 +1,2 @@
-# racket_packages
+# Racket Packages
+Adding helpful functions to plai-typed
