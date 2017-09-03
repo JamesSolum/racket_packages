@@ -9,8 +9,13 @@ Write the Average function
 Figure out how we include this package in our racket files
 |#
 
-;#### NEGATIVE?/POSITVE? #####
+;##### NEGATE #####
+;; negate : number -> number
+;; negates a number
+(define (negate x)
+	(* -1 x))
 
+;#### NEGATIVE?/POSITVE? #####
 ;; pos? : number -> bool
 ;; checks if a number is positive
 (define (pos? x)
@@ -24,7 +29,6 @@ Figure out how we include this package in our racket files
 	(not (pos? x)))
 
 ;##### EXPONENT #####
-
 ; HELPER
 ;; posExp : number number -> number
 ;; raises x to the e power
@@ -36,7 +40,7 @@ Figure out how we include this package in our racket files
 ;; negExp : number number -> number
 ;; raises x to the negative e power
 (define (negExp x e)
-	(/ 1 (posExp x (* -1 e))))
+	(/ 1 (posExp x (negate e))))
 
 ;; exp : number number -> number
 ;; combines pos and neg exp
@@ -46,7 +50,6 @@ Figure out how we include this package in our racket files
 		(negExp x e)))
 
 ;##### ABSOLUTE VALUE #####
-
 ;; abs : number -> number
 ;; takes any number and returns the absolute 
 ;; value of that number
@@ -55,13 +58,7 @@ Figure out how we include this package in our racket files
 		(* x -1)
 		x))
 
-;##### NEGATE #####
-;; negate : number -> number
-;; negates a number
-(define (negate x)
-	(* -1 x))
-
-
+;##### AVERAGE #####
 ;; average : lon -> number 
 
 
