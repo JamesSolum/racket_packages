@@ -5,15 +5,47 @@ Basic math functions
 
 TODO:
 figure out a better add function
-
+Write the Average function
+Figure out how we include this package in our racket files
 |#
 
-;; exp : number number -> number
+;#### NEGATIVE?/POSITVE? #####
+
+;; pos? : number -> bool
+;; checks if a number is positive
+(define (pos? x)
+	(if (> x 0)
+		true
+		false))
+
+;; neg? : number -> bool
+;; checks if a number is negative
+(define (neg? x)
+	(not (pos? x)))
+
+;##### EXPONENT #####
+
+; HELPER
+;; posExp : number number -> number
 ;; raises x to the e power
-(define (exp x e)
+(define (posExp x e)
   (cond [(= e 0) 1]
-	[else (* x (exp x (sub1 e)))]
+	[else (* x (posExp x (sub1 e)))]
 	))
+
+;; negExp : number number -> number
+;; raises x to the negative e power
+(define (negExp x e)
+	(/ 1 (posExp x (* -1 e))))
+
+;; exp : number number -> number
+;; combines pos and neg exp
+(define (exp x e)
+	(if (pos? e)
+		(posExp x e)
+		(negExp x e)))
+
+;##### ABSOLUTE VALUE #####
 
 ;; abs : number -> number
 ;; takes any number and returns the absolute 
