@@ -55,7 +55,7 @@ Figure out how we include this package in our racket files
 ;; value of that number
 (define (abs x)
 	(if (< x 0)
-		(* x -1)
+		(negate x)
 		x))
 
 ;##### AVERAGE #####
