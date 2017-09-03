@@ -28,4 +28,7 @@ Tests for my library
 (test (abs -2) 2)
 (test (abs 0) 0)
 
-
+;; negate : negates a number
+(test (negate -5) 5)
+(test (negate 4) -4)
+(test (negate 0) 0)

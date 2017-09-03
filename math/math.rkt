@@ -55,6 +55,13 @@ Figure out how we include this package in our racket files
 		(* x -1)
 		x))
 
+;##### NEGATE #####
+;; negate : number -> number
+;; negates a number
+(define (negate x)
+	(* -1 x))
+
+
 ;; average : lon -> number 
 
 
