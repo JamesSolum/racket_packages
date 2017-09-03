@@ -4,9 +4,6 @@
 
 #| 
 Tests for my library
-
-
-
 |#
 
 ;; pos? : checks if a number is positive
