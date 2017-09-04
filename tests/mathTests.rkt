@@ -29,3 +29,6 @@ Tests for my library
 (test (negate -5) 5)
 (test (negate 4) -4)
 (test (negate 0) 0)
+
+;; average : calculates the average of a list of numbers
+(test (avg (list 1 2 3 4 5)) 3)
