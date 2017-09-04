@@ -5,7 +5,6 @@ Basic math functions
 
 TODO:
 figure out a better add function
-Write the Average function
 Figure out how we include this package in our racket files
 |#
 
@@ -47,7 +46,7 @@ Figure out how we include this package in our racket files
 (define (exp x e)
 	(if (pos? e)
 		(posExp x e)
-		(negExp x e)))
+(negExp x e)))
 
 ;##### ABSOLUTE VALUE #####
 ;; abs : number -> number
@@ -59,6 +58,8 @@ Figure out how we include this package in our racket files
 		x))
 
 ;##### AVERAGE #####
-;; average : lon -> number 
-
+;; avg : lon -> number 
+;; calculates the average of a list of numbers
+(define (avg lon)
+	(/ (foldr + 0 lon) (length lon)))
 
