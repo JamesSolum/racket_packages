@@ -4,7 +4,6 @@
 Basic math functions
 
 TODO:
-figure out a better add function
 Figure out how we include this package in our racket files
 |#
 
