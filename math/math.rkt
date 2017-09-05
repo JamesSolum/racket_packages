@@ -73,5 +73,29 @@ Figure out how we include this package in our racket files
 		((_ a ...)
 		 (add-helper (list a ...)))))
 
+(define (sub-helper lon)
+  (foldl - 0 lon))
+
+(define-syntax sub
+  (syntax-rules ()
+    ((_ a ...)
+     (sub-helper (list a ...)))))
+
+(define (div-helper lon)
+  (foldr / 1 lon))
+
+(define-syntax div
+  (syntax-rules ()
+    ((_ a ...)
+     (div-helper (list a ...)))))
+
+(define (mult-helper lon)
+  (foldl * 1 lon))
+
+(define-syntax mult
+  (syntax-rules ()
+    ((_ a ...)
+     (mult-helper (list a ...)))))
+
 
 
