@@ -63,3 +63,15 @@ Figure out how we include this package in our racket files
 (define (avg lon)
 	(/ (foldr + 0 lon) (length lon)))
 
+
+;##### Advanced Add #####
+(define (add-helper lon)
+  (foldl + 0 lon))
+
+(define-syntax add
+  (syntax-rules ()
+		((_ a ...)
+		 (add-helper (list a ...)))))
+
+
+

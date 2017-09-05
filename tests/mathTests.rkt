@@ -32,3 +32,8 @@ Tests for my library
 
 ;; average : calculates the average of a list of numbers
 (test (avg (list 1 2 3 4 5)) 3)
+
+;; add : adds up all the parameters
+(test (add 1 2 3 4 5) 15)
+(test (add 1 2 3) 6)
+(test (add 1 -1) 0)
