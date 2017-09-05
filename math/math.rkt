@@ -73,7 +73,7 @@ Figure out how we include this package in our racket files
     ((_ a ...)
      (add-helper (list a ...)))))
 
-;##### Advanced Subtract
+;##### Advanced Subtract #####
 (define (sub-helper lon)
   (foldl - 0 lon))
 
