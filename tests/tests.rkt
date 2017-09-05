@@ -1,7 +1,7 @@
 #lang plai-typed
 
-(require "math.rkt")
-
+(require "../math/math.rkt")
+(print-only-errors true)
 #| 
 Tests for my library
 |#
@@ -31,7 +31,7 @@ Tests for my library
 (test (negate 0) 0)
 
 ;; average : calculates the average of a list of numbers
-(test (avg (list 1 2 3 4 5)) 3)
+(test (avg 1 2 3 4 5) 3)
 
 ;; add : adds up all the parameters
 (test (add 1 2 3 4 5) 15)

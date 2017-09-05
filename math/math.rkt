@@ -59,8 +59,13 @@ Figure out how we include this package in our racket files
 ;##### AVERAGE #####
 ;; avg : lon -> number 
 ;; calculates the average of a list of numbers
-(define (avg lon)
+(define (avg-helper lon)
   (/ (foldr + 0 lon) (length lon)))
+
+(define-syntax avg
+  (syntax-rules ()
+    ((_ a ...)
+     (avg-helper (list a ...)))))
 
 
 ;##### Advanced Add #####
