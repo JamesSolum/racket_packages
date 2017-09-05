@@ -73,6 +73,7 @@ Figure out how we include this package in our racket files
     ((_ a ...)
      (add-helper (list a ...)))))
 
+;##### Advanced Subtract
 (define (sub-helper lon)
   (foldl - 0 lon))
 
@@ -81,6 +82,7 @@ Figure out how we include this package in our racket files
     ((_ a ...)
      (sub-helper (list a ...)))))
 
+;##### Advanced Divide #####
 (define (div-helper lon)
   (foldr / 1 lon))
 
@@ -89,6 +91,7 @@ Figure out how we include this package in our racket files
     ((_ a ...)
      (div-helper (list a ...)))))
 
+;##### Advanced Multiply #####
 (define (mult-helper lon)
   (foldl * 1 lon))
 
