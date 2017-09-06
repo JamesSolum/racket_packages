@@ -4,6 +4,7 @@
 Basic math functions
 
 TODO:
+figure out a better add function
 Figure out how we include this package in our racket files
 Add error handling
 |#
@@ -45,6 +46,11 @@ Add error handling
       (posExp x e)
       (negExp x e)))
 
+;; sqr : number -> number
+;; takes a number and squares it
+(define (sqr x)
+  (* x x))
+
 ;##### ABSOLUTE VALUE #####
 ;; abs : number -> number
 ;; takes any number and returns the absolute 
@@ -57,13 +63,8 @@ Add error handling
 ;##### AVERAGE #####
 ;; avg : lon -> number 
 ;; calculates the average of a list of numbers
-(define (avg-helper lon)
+(define (avg lon)
   (/ (foldr + 0 lon) (length lon)))
-
-(define-syntax avg
-  (syntax-rules ()
-    ((_ a ...)
-     (avg-helper (list a ...)))))
 
 
 ;##### Advanced Add #####
@@ -75,7 +76,7 @@ Add error handling
     ((_ a ...)
      (add-helper (list a ...)))))
 
-;##### Advanced Subtract #####
+;##### Advanced Substract #####
 (define (sub-helper lon)
   (foldl - 0 lon))
 
@@ -83,6 +84,7 @@ Add error handling
   (syntax-rules ()
     ((_ a ...)
      (sub-helper (list a ...)))))
+
 
 ;##### Advanced Divide #####
 (define (div-helper lon)
@@ -102,5 +104,5 @@ Add error handling
     ((_ a ...)
      (mult-helper (list a ...)))))
 
-
-
+;##### PI ######
+(define PI 3.14159)
