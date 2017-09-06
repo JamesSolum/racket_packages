@@ -5,6 +5,7 @@ Basic math functions
 
 TODO:
 Figure out how we include this package in our racket files
+Add error handling
 |#
 
 ;##### NEGATE #####
@@ -17,15 +18,12 @@ Figure out how we include this package in our racket files
 ;; pos? : number -> bool
 ;; checks if a number is positive
 (define (pos? x)
-  (if (> x 0)
-      true
-      false))
+  (> x 0))
 
 ;; neg? : number -> bool
 ;; checks if a number is negative
 (define (neg? x)
-  (not (pos? x)))
-
+  (< x 0))
 ;##### EXPONENT #####
 ; HELPER
 ;; posExp : number number -> number

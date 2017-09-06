@@ -9,10 +9,12 @@ Tests for my library
 ;; pos? : checks if a number is positive
 (test (pos? 5) #t)
 (test (pos? -5) #f)
+(test (pos? 0) #f)
 
 ;; neg? :  checks if a number is positive
 (test (neg? 5) #f)
 (test (neg? -5) #t)
+(test (neg? 0) #f)
 
 ;; exp : raises a to the b power
 (test (exp 2 2) 4)
